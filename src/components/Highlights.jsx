@@ -1,9 +1,17 @@
+import Swal from 'sweetalert2'
 import GreekSalad from '../assets/greek salad.jpg'
 import Bruschetta from '../assets/bruchetta.svg'
 import LemonCake from '../assets/lemon dessert.jpg'
 
 export default function Highlights() {
-    return(
+    const showToast = () => {
+        Swal.fire({
+            icon: "success",
+            title: "Done It",
+            text: "Added to your cart",
+        });
+    }
+    return (
         <div className="highlight-section">
             <div className="highlight-head">
                 <h3>Specials</h3>
@@ -23,7 +31,7 @@ export default function Highlights() {
                     <div className="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, officia? Delectus deleniti atque perspiciatis, quibusdam expedita pariatur ad minima sapiente alias dolores modi sit? Eveniet impedit non ipsam quas quos!</p>
                     </div>
-                    <button className='order-delivery-button'>Order Delivery</button>
+                    <button className='order-delivery-button' onClick={showToast}>Order Delivery</button>
                 </div>
 
                 <div className="card">
@@ -36,7 +44,7 @@ export default function Highlights() {
                     <div className="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, officia? Delectus deleniti atque perspiciatis, quibusdam expedita pariatur ad minima sapiente alias dolores modi sit? Eveniet impedit non ipsam quas quos!</p>
                     </div>
-                    <button className='order-delivery-button'>Order Delivery</button>
+                    <button className='order-delivery-button' onClick={showToast}>Order Delivery</button>
                 </div>
 
                 <div className="card">
@@ -49,7 +57,7 @@ export default function Highlights() {
                     <div className="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, officia? Delectus deleniti atque perspiciatis, quibusdam expedita pariatur ad minima sapiente alias dolores modi sit? Eveniet impedit non ipsam quas quos!</p>
                     </div>
-                    <button className='order-delivery-button'>Order Delivery</button>
+                    <button className='order-delivery-button' onClick={showToast}>Order Delivery</button>
                 </div>
             </div>
         </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import RestaurantFood from '../assets/restauranfood.jpg'
 
 export default function Hero() {
@@ -7,13 +8,13 @@ export default function Hero() {
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Asperiores amet quidem omnis tempore expedita sequi hic 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Asperiores amet quidem omnis tempore expedita sequi hic
           laborum voluptatibus, minima nesciunt accusamus.
         </p>
-        <a href="">
+        <Link to={'/reservation'}>
           <button className='button-class'>Reserve a Table</button>
-        </a>
+        </Link>
       </div>
       <div className="feature-image">
         <img src={RestaurantFood} alt="Hero Section" />
